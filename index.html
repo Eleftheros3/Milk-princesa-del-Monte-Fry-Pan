@@ -43,6 +43,30 @@
             padding: 15px 0;
         }
        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+       
+        .logo-img {
+            width: 50px;
+            height: 50px;
+            background-color: #f8f9fa;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 2px solid #d4af37;
+        }
+       
+        .logo-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+       
         .logo {
             font-size: 24px;
             font-weight: 900;
@@ -302,7 +326,7 @@
             min-height: 40px;
             line-height: 1.3;
         }
-       
+        
         .product-price {
             margin-bottom: 15px;
         }
@@ -518,7 +542,7 @@
             align-items: center;
             gap: 15px;
         }
-       
+        
         .cart-total {
             text-align: right;
             font-size: 24px;
@@ -795,7 +819,7 @@
                 width: 95%;
                 padding: 20px;
             }
-           
+            
             .cart-buttons {
                 flex-direction: column;
             }
@@ -892,7 +916,12 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="logo">Loren_Ind</div>
+                <div class="logo-container">
+                    <div class="logo">Loren_Ind</div>
+                    <div class="logo-img">
+                        <img src="imagenes/logo.jpg" alt="Logo Loren_Ind" onerror="this.style.display='none'">
+                    </div>
+                </div>
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -990,7 +1019,7 @@
                         <li><a href="#"><i class="fas fa-home"></i> Inicio</a></li>
                         <li><a href="#" id="footerAllProducts"><i class="fas fa-box"></i> Productos</a></li>
                         <li class="footer-dropdown">
-                            <a href="#"><i class="fas fa-list"></i> Categorías <i class="fas fa-chevron-up"></i></a>
+                            <a href="#" id="footerCategoriesLink"><i class="fas fa-list"></i> Categorías <i class="fas fa-chevron-up"></i></a>
                             <ul class="footer-dropdown-menu" id="footerCategoriesMenu">
                                 <!-- Las categorías se cargarán con JavaScript -->
                             </ul>
@@ -1014,7 +1043,7 @@
             </div>
         </div>
     </footer>
-
+    
     <script>
         // Array de 12 categorías para productos de limpieza
         const categories = [
@@ -1165,6 +1194,7 @@
         const sendWhatsApp = document.getElementById('sendWhatsApp');
         const categoriesMenu = document.getElementById('categoriesMenu');
         const footerCategoriesMenu = document.getElementById('footerCategoriesMenu');
+        const footerCategoriesLink = document.getElementById('footerCategoriesLink');
         const allProductsBtn = document.getElementById('allProducts');
         const ofertasBtn = document.getElementById('ofertas');
         const footerAllProducts = document.getElementById('footerAllProducts');
@@ -1217,6 +1247,8 @@
                 menuLink.addEventListener('click', function(e) {
                     e.preventDefault();
                     filterByCategory(category.id);
+                    // Prevenir scroll al inicio
+                    e.stopPropagation();
                 });
                 menuItem.appendChild(menuLink);
                 footerCategoriesMenu.appendChild(menuItem);
@@ -1238,12 +1270,22 @@
         function showAllProducts() {
             const sortedProducts = [...products].sort((a, b) => a.name.localeCompare(b.name));
             displayProducts(sortedProducts);
+            
+            // Hacer scroll suave a los productos
+            document.querySelector('.content-with-ads').scrollIntoView({
+                behavior: 'smooth'
+            });
         }
 
         // Mostrar productos en oferta
         function showOfertas() {
             const ofertasProducts = products.filter(product => product.onSale);
             displayProducts(ofertasProducts);
+            
+            // Hacer scroll suave a los productos
+            document.querySelector('.content-with-ads').scrollIntoView({
+                behavior: 'smooth'
+            });
         }
 
         // Mostrar productos
@@ -1426,7 +1468,7 @@
             document.querySelectorAll('.minus-cart').forEach(button => {
                 button.addEventListener('click', decreaseCartQuantity);
             });
-           
+            
             document.querySelectorAll('.plus-cart').forEach(button => {
                 button.addEventListener('click', increaseCartQuantity);
             });
@@ -1551,6 +1593,12 @@
             showOfertas();
         });
 
+        // Prevenir que el enlace de categorías en el footer haga scroll al inicio
+        footerCategoriesLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        });
+
         // Menú móvil
         mobileMenuBtn.addEventListener('click', function() {
             mainNav.classList.toggle('show');
@@ -1603,4 +1651,4 @@
         });
     </script>
 </body>
-</html>   
+</html>
