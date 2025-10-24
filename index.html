@@ -40,7 +40,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 0;
+            padding: 5px 0;
         }
        
         .logo-container {
@@ -50,8 +50,8 @@
         }
        
         .logo-img {
-            width: 50px;
-            height: 50px;
+            width: 70px;
+            height: 70px;
             background-color: #f8f9fa;
             border-radius: 50%;
             display: flex;
@@ -64,7 +64,7 @@
         .logo-img img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
         }
        
         .logo {
@@ -569,15 +569,15 @@
         footer {
             background: linear-gradient(135deg, #2c3e50, #34495e);
             color: white;
-            padding: 50px 0 20px;
-            margin-top: 70px;
+            padding: 10px 0 20px;
+            margin-top: 50px;
         }
        
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
-            margin-bottom: 40px;
+            margin-bottom: 10px;
         }
        
         .footer-section h3 {
@@ -919,7 +919,7 @@
                 <div class="logo-container">
                     <div class="logo">Loren_Ind</div>
                     <div class="logo-img">
-                        <img src="imagenes/logo.jpg" alt="Logo Loren_Ind" onerror="this.style.display='none'">
+                        <img src="imagenes/logo_lor_II.png" alt="Logo Loren_Ind" onerror="this.style.display='none'">
                     </div>
                 </div>
                 <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -1033,7 +1033,7 @@
                     <ul>
                         <li><a href="mailto:info@lorenind.com"><i class="fas fa-envelope"></i> info@lorenind.com</a></li>
                         <li><a href="#" id="whatsappInfo"><i class="fab fa-whatsapp"></i> +593 99 159 6527</a></li>
-                        <li><a href="#" id="ubicacion"><i class="fas fa-map-marker-alt"></i> Guayaquil - Ecuador</a></li>
+                        <li><a href="#" id="ubicacion"><i class="fas fa-map-marker-alt"></i> 100% ONLINE </a></li>
                         <li><a href="#" id="envios"><i class="fas fa-truck"></i> Guayaquil - Ecuador</a></li>
                     </ul>
                 </div>
@@ -1047,40 +1047,40 @@
     <script>
         // Array de 12 categorías para productos de limpieza
         const categories = [
-            { id: "desinfectantes", name: "Desinfectantes", icon: "fas fa-spray-can" },
-            { id: "aromatizantes", name: "Aromatizantes", icon: "fas fa-wind" },
-            { id: "limpiadores", name: "Limpiadores", icon: "fas fa-broom" },
-            { id: "jabones", name: "Jabones y Detergentes", icon: "fas fa-soap" },
-            { id: "alcohol", name: "Alcohol y Geles", icon: "fas fa-hand-sparkles" },
-            { id: "ambientadores", name: "Ambientadores", icon: "fas fa-cloud" },
-            { id: "insumos", name: "Insumos de Limpieza", icon: "fas fa-tools" },
-            { id: "especializados", name: "Productos Especializados", icon: "fas fa-star" },
-            { id: "naturales", name: "Productos Naturales", icon: "fas fa-leaf" },
-            { id: "automotriz", name: "Limpieza Automotriz", icon: "fas fa-car" },
-            { id: "hogar", name: "Cuidado del Hogar", icon: "fas fa-home" },
-            { id: "personal", name: "Higiene Personal", icon: "fas fa-user" }
+            { id: "paraTucocina", name: "Para tu Cocina", icon: "fas fa-kitchen-set" },
+            { id: "paraTubebe", name: "Para tu Bebé", icon: "fas fa-baby" },
+            { id: "detergentesYcloro", name: "Detergentes y Cloro", icon: "fas fa-flask" },
+            { id: "desinfectantesYsuavizantes", name: "Desinfectantes y Suavizantes", icon: "fas fa-prescription-bottle" },
+            { id: "paraTuhogar", name: "Para tu Hogar", icon: "fas fa-home" },
+            { id: "paraTubaño", name: "Para tu Baño", icon: "fas fa-toilet" },
+            { id: "bactericidas", name: "Bactericidas", icon: "fas fa-hand-sparkles" },
+            { id: "jabonesLiquidos", name: "Jabones Liquidos", icon: "fas fa-pump-soap" },
+            { id: "paraEllas", name: "Para Ellas", icon: "fas fa-female" },
+            { id: "paraEllos", name: "Para Ellos", icon: "fas fa-user" },
+            { id: "vidaSana", name: "Vida Sana", icon: "fas fa-heart" },
+            { id: "paraTuauto", name: "Para tu Auto", icon: "fas fa-car" }
         ];
 
         // Datos de productos de ejemplo con ofertas
         const products = [
             {
                 id: 1,
-                name: "Alcohol en Gel Aroma Manzanilla",
-                price: 5.00,
-                originalPrice: 6.50,
-                image: "imagenes/alcohol-gel-manzanilla.jpg",
-                description: "Alcohol en gel con aroma relajante a manzanilla. Ideal para manos.",
-                category: "alcohol",
+                name: "Arranca Grasa Limon Galón",
+                price: 15.00,
+                originalPrice: 17.50,
+                image: "imagenes/arranca-grasa-galon.jpg",
+                description: "Producto de fórmula especializada que permite eliminar facilmente las manchas de grasa concentrada en tu cocina, sin nesecidad de refregar, dejando un suave aroma a limon.",
+                category: "paraTucocina",
                 onSale: true
             },
             {
                 id: 2,
-                name: "Ambiental de Auto Nuevo",
-                price: 12.00,
+                name: "Arranca Grasa Limon 600ml",
+                price: 4.65,
                 originalPrice: 15.00,
-                image: "imagenes/ambiental-autoNuevo.jpg",
-                description: "Para que tu auto siempre tenga ese olor a nuevo.",
-                category: "automotriz",
+                image: "imagenes/arranca-grasa-limon-600ml.png",
+                description: "Producto de fórmula especializada que permite eliminar facilmente las manchas de grasa concentrada en tu cocina, sin nesecidad de refregar, dejando un suave aroma a limon.",
+                category: "paraTucocina",
                 onSale: true
             },
             {
@@ -1268,13 +1268,18 @@
 
         // Mostrar todos los productos ordenados alfabéticamente
         function showAllProducts() {
-            const sortedProducts = [...products].sort((a, b) => a.name.localeCompare(b.name));
-            displayProducts(sortedProducts);
+            displayProducts(products);
             
             // Hacer scroll suave a los productos
             document.querySelector('.content-with-ads').scrollIntoView({
                 behavior: 'smooth'
             });
+        }
+
+        // nueva función para orden alfabético
+        function showProductsAlphabetically() {
+            const sortedProducts = [...products].sort((a, b) => a.name.localeCompare(b.name));
+            displayProducts(sortedProducts);
         }
 
         // Mostrar productos en oferta
@@ -1537,14 +1542,14 @@
                 return;
             }
            
-            let message = "¡Hola! Me gustaría hacer el siguiente pedido:%0A%0A";
-            message += "*📦 PEDIDO LOREN_IND*%0A%0A";
+            let message = "¡Hola! Me gustaría hacer el siguiente pedido:\n";
+            message += "*📦 PEDIDO LOREN_IND*\n\n";
            
             cart.forEach(item => {
-                message += `• ${item.name} x${item.quantity} - $${(item.price * item.quantity).toFixed(2)}%0A`;
+                message += `• ${item.name} x${item.quantity} - $${(item.price * item.quantity).toFixed(2)}\n`;
             });
            
-            message += `%0A*💰 Total: $${cartTotal.textContent}*%0A%0A`;
+            message += `\n*💰 Total: $${cartTotal.textContent}*\n\n`;
             message += "Por favor, confirmen disponibilidad y forma de pago. ¡Gracias! 🌟";
            
             openWhatsApp(message);
@@ -1607,7 +1612,7 @@
         // Botón ver colección
         verColeccionBtn.addEventListener('click', function(e) {
             e.preventDefault();
-            showAllProducts();
+            showProductsAlphabetically();
             document.querySelector('.content-with-ads').scrollIntoView({
                 behavior: 'smooth'
             });
@@ -1652,4 +1657,3 @@
     </script>
 </body>
 </html>
-
