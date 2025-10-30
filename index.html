@@ -807,6 +807,17 @@
             .products-grid {
                 grid-template-columns: 1fr;
             }
+
+            .product-img {
+                height: 500px;
+                width: 100%;
+            }
+
+            .product-img img {
+                object-fit: contain;
+                width: 100%;
+                height: 100%;
+            }
            
             .ad-sidebar {
                 flex-direction: column;
@@ -892,7 +903,18 @@
             }
            
             .product-img {
-                height: 200px;
+                height: 290px;
+                width: 100%;
+            }
+
+            .product-img img{
+                object-fit: contain;
+                width: 100%;
+                height: 100%;
+            }
+
+            .product-card{
+                margin:0 5px;
             }
 
             .ad-banner-top .ad-container,
@@ -1054,7 +1076,7 @@
             { id: "detergentesYcloro", name: "Detergentes y Cloro", icon: "fas fa-flask" },
             { id: "desinfectantesYsuavizantes", name: "Desinfectantes y Suavizantes", icon: "fas fa-prescription-bottle" },
             { id: "paraTuhogar", name: "Para tu Hogar", icon: "fas fa-home" },
-            { id: "paraTubaño", name: "Para tu Baño", icon: "fas fa-toilet" },
+            { id: "paraTubano", name: "Para tu Baño", icon: "fas fa-toilet" },
             { id: "bactericidas", name: "Bactericidas", icon: "fas fa-hand-sparkles" },
             { id: "jabonesLiquidos", name: "Jabones Liquidos", icon: "fas fa-pump-soap" },
             { id: "paraEllas", name: "Para Ellas", icon: "fas fa-female" },
@@ -1105,79 +1127,658 @@
             },
             {
                 id: 5,
-                name: "Aromatizante Ambiental Lavanda",
-                price: 15.00,
-                originalPrice: 18.00,
-                image: "imagenes/aromatizante-lavanda.jpg",
-                description: "Fragancia relajante de lavanda para tu hogar.",
-                category: "aromatizantes",
+                name: "Lavavajillas Limon Galón",
+                price: 14.40,
+                originalPrice: 15.70,
+                image: "imagenes/lavavajillas-galon-limon.jpg",
+                description: "Producto líquido concentrado especialmente diseñado para el lavado de loza, cristaleria y utensilios de cocina, gracias a su formula eliminara la grasa y suciedad facilmente.",
+                category: "paraTucocina",
                 onSale: true
             },
             {
                 id: 6,
-                name: "Limpiador de Vidrios",
-                price: 9.25,
-                image: "imagenes/limpiador-vidrios.jpg",
-                description: "Deja tus vidrios y espejos impecables.",
-                category: "limpiadores",
+                name: "Lavavajilla Limon Litro",
+                price: 5.05,
+                image: "imagenes/lavavajilla-limon-litro.jpg",
+                description: "Producto líquido concentrado especialmente diseñado para el lavado de loza, cristaleria y utensilios de cocina, gracias a su formula eliminara la grasa y suciedad facilmente.",
+                category: "paraTucocina",
                 onSale: false
             },
             {
                 id: 7,
-                name: "Detergente Concentrado",
-                price: 18.50,
-                originalPrice: 22.00,
-                image: "imagenes/detergente.jpg",
-                description: "Detergente concentrado para ropa blanca y de color.",
-                category: "jabones",
+                name: "Limpiador Antibacterial para Neveras y Refrigeradoras 600ml",
+                price: 4.25,
+                originalPrice: 5.00,
+                image: "imagenes/limpiador-neveras.jpg",
+                description: "Producto con atomizador y formula especializada para que el interior de tu nevera y refrigeradora quede deslumbrante y sin olores.",
+                category: "paraTucocina",
                 onSale: true
             },
             {
                 id: 8,
-                name: "Ambientador en Spray",
-                price: 11.00,
-                image: "imagenes/ambientador-spray.jpg",
-                description: "Spray ambiental con fragancias duraderas.",
-                category: "ambientadores",
+                name: "Multiusos Sin Aroma Galón",
+                price: 16.45,
+                image: "imagenes/multiusos-galon.jpg",
+                description: "Producto de limpieza liquido altamente concentrado que actua como detergente y desengrasante, gracias a su fromulación sera más facil retirar suciedad y grasa en tu area de cocina o lavanderia, no es inflamable, no afecta la salud.",
+                category: "paraTucocina",
                 onSale: false
             },
             {
                 id: 9,
-                name: "Limpiador de Pisos",
-                price: 7.80,
-                originalPrice: 9.50,
-                image: "imagenes/limpiador-pisos.jpg",
-                description: "Limpia y desinfecta todo tipo de pisos.",
-                category: "limpiadores",
+                name: "Multiusos Sin Aroma Litro",
+                price: 4.25,
+               originalPrice: 5.00,
+                image: "imagenes/multiusos-litro.jpg",
+                description: "Producto de limpieza liquido altamente concentrado que actua como detergente y desengrasante, gracias a su fromulación sera más facil retirar suciedad y grasa en tu area de cocina o lavanderia, no es inflamable, no afecta la salud.",
+                category: "paraTucocina",
                 onSale: true
             },
             {
                 id: 10,
-                name: "Gel Antibacterial",
-                price: 4.50,
-                image: "imagenes/gel-antibacterial.jpg",
-                description: "Protección antibacterial para manos.",
-                category: "alcohol",
+                name: "Destapador de Cañerias Litro",
+                price: 5.05,
+                image: "imagenes/destapador-canerias.jpg",
+                description: "Es un potente agente químico que elimina acumulaciones de material vegetal, grasas, fango, cabellos, hilachas, colillas de cigarrillos, etc. No quita obstrucciones causadas por madera, hierro, metal, vidrio roto u otras sustancias solidas similares. Es efectivo sobre todo tipo de superficies.",
+                category: "paraTucocina",
                 onSale: false
             },
             {
                 id: 11,
-                name: "Desinfectante de Baños",
-                price: 10.25,
-                image: "imagenes/desinfectante-banos.jpg",
-                description: "Elimina gérmenes y malos olores.",
-                category: "desinfectantes",
+                name: "Detergente para ropa de Bebé Floral Galón",
+                price: 16.45,
+                image: "imagenes/detergente-liquido-ropa-de-bebe-galon.jpg",
+                description: "Producto líquido hipoalergénico altamente concentrado, especialmente formulado para el lavado de ropa delicada de bebé. No contiene ningún elemento perjudicial para la salud, no ataca a ningún tipo de ropa pero atrapa toda suciedad en forma rápida y eficaz.",
+                category: "paraTubebe",
                 onSale: false
             },
             {
                 id: 12,
-                name: "Jabón de Tocador Natural",
-                price: 3.75,
-                originalPrice: 5.00,
-                image: "imagenes/jabon-natural.jpg",
-                description: "Jabón artesanal con ingredientes naturales.",
-                category: "naturales",
+                name: "Detergente para ropa de Bebé Floral Litro",
+                price: 5.05,
+                originalPrice: 7.00,
+                image: "imagenes/detergente-liquido-bebe-litro.jpg",
+                description: "Producto líquido hipoalergénico altamente concentrado, especialmente formulado para el lavado de ropa delicada de bebé. No contiene ningún elemento perjudicial para la salud, no ataca a ningún tipo de ropa pero atrapa toda suciedad en forma rápida y eficaz.",
+                category: "paraTubebe",
                 onSale: true
+            },
+            {
+                id: 13,
+                name: "Plancha Fácil Floral 600mml",
+                price: 3.35,
+                image: "imagenes/plancha-facil.png",
+                description: "Producto líquido facilitador del planchado de prendas que lubrica las fibras para que las arrgugas desaparezcan.",
+                category: "paraTubebe",
+                onSale: false
+            },
+            {
+                id: 14,
+                name: "Limpiador de Biberones Litro",
+                price: 4.90,
+                originalPrice: 5.00,
+                image: "imagenes/limpiador-de-biberones.jpg",
+                description: "Líquido especialmente formulado para remover la grasa y proteínas de la leche, asegurando que no queden residuos tóxicos en el interior del recipiente. Puede ser utilizado para la limpieza segura de los accesorios del bebé como biberones, chupetes y juguetes.",
+                category: "paraTubebe",
+                onSale: true
+            },
+            {
+                id: 15,
+                name: "Jabón de Baño para Bebés y Niños Aroma Angel Litro",
+                price: 9.25,
+                image: "imagenes/jabon-de-bano-para-bebes-angel.jpg",
+                description: "Producto de baño diseñado para limpiar suavemente la delicada piel, cuero cabelludo y el cabello de los infantes. Luego del uso la piel del bebé quedará suave, humectada, el cabello limpio brillante y manejable. Tiene PH neutro, libre de parabenos y cloruro de sodio por lo que no provoca lágrimas.",
+                category: "paraTubebe",
+                onSale: false
+            },
+            {
+                id: 16,
+                name: "Jabón de Baño para Bebés y Niños Aroma Manzanilla Litro",
+                price: 11.55,
+                originalPrice: 13.00,
+                image: "imagenes/jabon-de-bano-para-bebes-manzanilla.jpg",
+                description: "Producto de baño diseñado para limpiar suavemente la delicada piel, cuero cabelludo y el cabello de los infantes. Luego del uso la piel del bebé quedará suave, humectada, el cabello limpio brillante y manejable. Tiene PH neutro, libre de parabenos y cloruro de sodio por lo que no provoca lágrimas.",
+                category: "paraTubebe",
+                onSale: true
+            },
+            {
+                id: 17,
+                name: "Detergente Ropa Oscura Manzana Verde Galón",
+                price: 17.70,
+                image: "imagenes/detergente-liquido-ropa-oscura-galon.jpg",
+                description: "Este suave detergente líquido es ideal para la ropa negra y oscura, sus aditivos especiales y abrillantadores ópticos mantendran tu ropa con aspecto nuevo por más tiempo sin dañar sus tejidos.",
+                category: "detergentesYcloro",
+                onSale: false
+            },
+            {
+                id: 18,
+                name: "Detergente Ropa Oscura Manzana Verde Litro",
+                price: 5.05,
+                image: "imagenes/detergente-liquido-ropa-oscura-litro.jpg",
+                description: "Este suave detergente líquido es ideal para la ropa negra y oscura, sus aditivos especiales y abrillantadores ópticos mantendran tu ropa con aspecto nuevo por más tiempo sin dañar sus tejidos.",
+                category: "detergentesYcloro",
+                onSale: false
+            },
+            {
+                id: 19,
+                name: "Detergente Restaurador de Ropa Vainilla Litro",
+                price: 5.40,
+                originalPrice: 7.00,
+                image: "imagenes/detergente-restaurador-de-ropa.jpg",
+                description: "Concentrado, contiene abrillantadores ópticos que mejoran la apariencia de las prendas, eliminando los tonos amarillos que dan apariencia avejentadas a las telas. Incorpora un agradable aroma vainilla relajante.",
+                category: "detergentesYcloro",
+                onSale: true
+            },
+            {
+                id: 20,
+                name: "Detergente Liquido Floral Galón",
+                price: 15.15,
+                image: "imagenes/detergente-liquido-floral-galon.jpg",
+                description: "Sus maravillosas funciones en el lavado de prendas desarrollarán la limpieza profunda de sus tejidos dejando un agradable aroma que perdura en tu ropa.",
+                category: "detergentesYcloro",
+                onSale: false
+            },
+            {
+                id: 21,
+                name: "Detergente Liquido Floral Litro",
+                price: 4.35,
+                originalPrice: 6.00,
+                image: "imagenes/detergente-liquido-floral-litro.jpg",
+                description: "Sus maravillosas funciones en el lavado de prendas desarrollarán la limpieza profunda de sus tejidos dejando un agradable aroma que perdura en tu ropa.",
+                category: "detergentesYcloro",
+                onSale: true
+            },
+            {
+                id: 22,
+                name: "Detergente con Suavizante Frutos Rojos 2000ml",
+                price: 13.15,
+                image: "imagenes/detergente-con-suavizante-frutos-rojos-2000-ml.jpg",
+                description: "Concentrado con suavizante de eficacia probada, para el lavado de todo tipo de ropa blanca y de color, contiene suavizante activo que reduce la electricidad estática de la fibra, por lo tanto, se suavizan las prendas lo que facilita el secado y plancado. No contiene jabón álcali libre, soda cáustica u otros ingredientes perjudiciales. No es inflameble, no daña la piel y no es tóxico.",
+                category: "detergentesYcloro",
+                onSale: false
+            },
+            {
+                id: 23,
+                name: "Detergente para Ropa Intima 2000ml",
+                price: 11.30,
+                image: "imagenes/detergente-ropa-intima.jpeg",
+                description: "Sus maravilloss funciones en el lavado de prendas desarrollarán la limpieza profunda de sus tejidos dejando un agradable aroma que perdurara en tu ropa.",
+                category: "detergentesYcloro",
+                onSale: false
+            },
+            {
+                id: 24,
+                name: "Quita Manchas Litro",
+                price: 4.65,
+                image: "imagenes/quita-manchas-litro.jpg",
+                description: "Si las manchas de tu ropa antes eran un problema, ahora se resolverá, sus maravillosas funcones en el lavado de prendas lograrán la limpieza profunda de los tejidos y potenciará tu detergente para que ya no refriegues más.",
+                category: "detergentesYcloro",
+                onSale: false
+            },
+            {
+                id: 25,
+                name: "Cloro sin Aroma Galón",
+                price: 6.15,
+                image: "imagenes/cloro-sin-aroma-galon.jpg",
+                description: "Producto que conserva limpio y libre de gérmenes todos los espacios del hogar gracias a su poder blanqueador y desinfectante que actúa al instante.",
+                category: "detergentesYcloro",
+                onSale: false
+            },
+            {
+                id: 26,
+                name: "Cloro sin Aroma Litro",
+                price: 2.15,
+                image: "imagenes/cloro-sin-aroma-litro.jpg",
+                description: "Producto que conserva limpio y libre de gérmenes todos los espacios del hogar gracias a su poder blanqueador y desinfectante que actúa al instante.",
+                category: "detergentesYcloro",
+                onSale: false
+            },
+            {
+                id: 27,
+                name: "Cloro Gel Pino Galón",
+                price: 12.35,
+                image: "imagenes/cloro-gel-galon.png",
+                description: "Producto que mantiene el control de la limpieza con su textura gel que se adhiere con facilidad actuando como desinfectacte, ademas de su alto poder espumante te proporcionará un agradable y duradero aroma a pino.",
+                category: "detergentesYcloro",
+                onSale: false
+            },
+            {
+                id: 28,
+                name: "Cloro Gel Pino Litro",
+                price: 3.70,
+                image: "imagenes/cloro-gel-litro.jpg",
+                description: "Producto que mantiene el control de la limpieza con su textura gel que se adhiere con facilidad actuando como desinfectacte, ademas de su alto poder espumante te proporcionará un agradable y duradero aroma a pino.",
+                category: "detergentesYcloro",
+                onSale: false
+            },
+            {
+                id: 29,
+                name: "Detergente en Polvo Floral 1KG",
+                price: 4.95,
+                originalPrice: 6.00,
+                image: "imagenes/detergente-en-polvo.jpg",
+                description: "Detergente en polvo con moleculas de oxigeno, elimina manchas difíciles es biodegradable aroma a floral ideal para ropa blanca y de color.",
+                category: "detergentesYcloro",
+                onSale: true
+            },
+            {
+                id: 30,
+                name: "Desinfectante de Frutas y Verduras Sin Aroma 500ml",
+                price: 3.60,
+                originalPrice: 5.00,
+                image: "imagenes/desinfectante-defrutas.jpg",
+                description: "Producto especialmente formulado para proporcionar una accioin altamente efectiva contra todo tipo de gérmenes y patógenos que se encuentren presentes en frutas y verduras.",
+                category: "desinfectantesYsuavizantes",
+                onSale: true
+            },
+            {
+                id: 31,
+                name: "Desinfectante Formula Mejorada Maracuyá Galón",
+                price: 17.45,
+                image: "imagenes/desinfectante-maracuya-galon.jpeg",
+                description: "Desinfectante concentrado, sirve para multiples aplicaciones en la limpieza, desinfección y aromatización. Elimina el 99.9% de virus y bacterias, además que deja un efecto residual que elimina microorganismos por un mayor tiempo.",
+                category: "desinfectantesYsuavizantes",
+                onSale: false
+            },
+            {
+                id: 32,
+                name: "Desinfectante Formula Mejorada Maracuyá Litro",
+                price: 4.65,
+                originalPrice: 6.00,
+                image: "imagenes/desinfectantemaracuya-litro.jpg",
+                description: "Desinfectante concentrado, sirve para multiples aplicaciones en la limpieza, desinfección y aromatización. Elimina el 99.9% de virus y bacterias, además que deja un efecto residual que elimina microorganismos por un mayor tiempo.",
+                category: "desinfectantesYsuavizantes",
+                onSale: true
+            },
+            {
+                id: 33,
+                name: "Desinfectante Formula Mejorada Manzana Canela Litro",
+                price: 4.65,
+                image: "imagenes/desinfectante-manzana-canela-litro.jpg",
+                description: "Producto versátil múltiples aplicaciones en la limpieza, desinfección y aromatización. Reune condiciones de tensoactivos humectantes que potencializan sus cualidades en cualquier superfície",
+                category: "desinfectantesYsuavizantes",
+                onSale: false
+            },
+            {
+                id: 34,
+                name: "Desinfectante Formula Mejorada Pino Litro",
+                price: 4.65,
+                image: "imagenes/desinfectantepino_litro.jpg",
+                description: "Sus múltiples aplicaciones harán que tu hogar se envuelva en la frescura agradable, permitiendo a la vez una limpieza y desinfección profunda. Desinfecta todos los rincones de tu casa con un agradable aroma a pino.",
+                category: "desinfectantesYsuavizantes",
+                onSale: false
+            },
+            {
+                id: 35,
+                name: "Desinfectante Formula Mejorada Brisa Galón",
+                price: 13.15,
+                image: "imagenes/DESINFECTANTE-BRISA-galon.jpeg",
+                description: "Sus múltiples aplicaciones harán que tu hogar se envuelva en la frescura agradable, permitiendo a la vez una limpieza y desinfección profunda. Desinfecta todos los rincones de tu casa.",
+                category: "desinfectantesYsuavizantes",
+                onSale: false
+            },
+            {
+                id: 36,
+                name: "Desinfectante Formula Mejorada Brisa Litro",
+                price: 4.65,
+                image: "imagenes/desinfectante-brisa-litro.jpeg",
+                description: "Sus múltiples aplicaciones harán que tu hogar se envuelva en la frescura agradable, permitiendo a la vez una limpieza y desinfeccion profunda. Desinfecta todos los rincones de tu casa.",
+                category: "desinfectantesYsuavizantes",
+                onSale: false
+            },
+            {
+                id: 37,
+                name: "Desinfectante de Colchones 600ml",
+                price: 9.25,
+                originalPrice: 10.00,
+                image: "imagenes/desinfectante-decolchones.jpg",
+                description: "Producto eficaz que ayuda a erradicar microorganismos como: Escherichia, Coli, Salmonella SPP, Staphylococcus Aureus, Bacillus Cereus, Pseudomona Aeruginosa y Acaros, que son una fuente potencial de infecciones y alergias. Este producto puede ser aplicado en cualquier entorno, colchon, almohada, peluches, alfombras y cortinas.",
+                category: "desinfectantesYsuavizantes",
+                onSale: true
+            },
+            {
+                id: 38,
+                name: "Suavizante Vainilla Galón",
+                price: 13.35,
+                image: "imagenes/suavizante-vainilla-galon.jpg",
+                description: "Mantén tu ropa con la máxima suavidad, frescura y un exquisito aroma. Es el único con acción germicida, ideal para todo tipo de tela.",
+                category: "desinfectantesYsuavizantes",
+                onSale: false
+            },
+            {
+                id: 39,
+                name: "Suavizante Vainilla Litro",
+                price: 3.85,
+                image: "imagenes/suavizante-vainilla-litro.jpg",
+                description: "Mantén tu ropa con la máxima suavidad, frescura y un exquisito aroma. Es el único con acción germicida, ideal para todo tipo de tela.",
+                category: "desinfectantesYsuavizantes",
+                onSale: false
+            },
+            {
+                id: 40,
+                name: "Suavizante Flores del Campo Galón",
+                price: 13.35,
+                image: "imagenes/suavizante-flores-del-campo-galon.jpg",
+                description: "Mantén tu ropa con la máxima suavidad, frescura y un exquisito aroma. Es el único con acción germicida, ideal para todo tipo de tela.",
+                category: "desinfectantesYsuavizantes",
+                onSale: false
+            },
+            {
+                id: 41,
+                name: "Suavizante Flores del Campo Litro",
+                price: 3.85,
+                originalPrice: 5.00,
+                image: "imagenes/suavizante-liquido-floral-litro.jpg",
+                description: "Mantén tu ropa con la máxima suavidad, frescura y un exquisito aroma. Es el único con acción germicida, ideal para todo tipo de tela.",
+                category: "desinfectantesYsuavizantes",
+                onSale: true
+            },
+            {
+                id: 42,
+                name: "Virusbacter Sin Aroma 600ml",
+                price: 5.65,
+                originalPrice: 7.00,
+                image: "imagenes/virusbacte.png",
+                description: "Este producto contiene agentes que aseguran una eliminacióndel 99,9% de los virus, bacterias, hongosy esporas sobre la superficie aplicada, gracias a su doble operacion biocida, posee una accion residual efectiva garantizando un control y reduccion de la contaminacion microbiológica.",
+                category: "paraTuhogar",
+                onSale: true
+            },
+            {
+                id: 43,
+                name: "Limpia Vidrios Sin Aroma 600ml",
+                price: 4.00,
+                image: "imagenes/limpiavidrios.png",
+                description: "Producto líquido de carácter ácido con excelentes cualidades de detergencia, desinfección, remueve manchas, óxidos, sarro y depósitos calcáreos, empleado para la limpieza de vidrios, espejos, vitrinas, mesas de vidrio.",
+                category: "paraTuhogar",
+                onSale: false
+            },
+            {
+                id: 44,
+                name: "Limpia Muebles Vainilla 500ml",
+                price: 4.65,
+                image: "imagenes/limpiamuebles.jpg",
+                description: "Producto desarrollado para limpiar, abrillantar y proteger los muebles de madera, MDF, vinil, fórmica. Retira el polvo, eliminando alérgenos, protege la superficie del mueble de manchas de agua, rayos ultravioleta del sol, resequedad, decoloración y rayaduras, provee a la superficie tratada un olor a vainilla.",
+                category: "paraTuhogar",
+                onSale: false
+            },
+            {
+                id: 45,
+                name: "Shampoo para Alfombras y Tapices Fresa 2000ml",
+                price: 8.00,
+                image: "imagenes/shampoo-para-alfombras.jpg",
+                description: "Es un detergente liquido altamente concentrado y ligeramente viscoso, especialmente formulado para remocion de grasas, aceites, manchas de comida y suciedd que se encuentre presente en la alfombra, felpas, tapices, muebles y enseres.",
+                category: "paraTuhogar",
+                onSale: false
+            },
+            {
+                id: 46,
+                name: "Desoxidante de Superficies 600ml",
+                price: 5.15,
+                image: "imagenes/desoxidante-de-superficies.jpg",
+                description: "Producto líquido ideal para la limpieza del óxido generado en superficies metálicas dejando un recubrimiento de una fina capa que previene el desgaste de las superficies y da una protección extra contra los procesos de oxidación ocasionados por el ambiente.",
+                category: "paraTuhogar",
+                onSale: false
+            },
+            {
+                id: 47,
+                name: "Ultrasarro Galón",
+                price: 12.35,
+                originalPrice: 15.00,
+                image: "imagenes/ultrasarro-galon.jpg",
+                description: "Conserva limpio y libre de hongos los espacios de tu baño gracias al poder removedor y desinfectante que elimina los residuos de jabon, sarro y suciedad de forma inmediata.",
+                category: "paraTubano",
+                onSale: true
+            },
+            {
+                id: 48,
+                name: "Ultrasarro 600ml",
+                price: 3.60,
+                image: "imagenes/ultrasarro-600.png",
+                description: "Conserva limpio y libre de hongos los espacios de tu baño gracias al poder removedor y desinfectante que elimina los residuos de jabon, sarro y suciedad de forma inmediata.",
+                category: "paraTubano",
+                onSale: false
+            },
+            {
+                id: 49,
+                name: "Limpiador Desinfectante de Inodoros Brisa Marina Litro",
+                price: 3.85,
+                image: "imagenes/limpiador-inodoro.jpg",
+                description: "Conserva limpio y libre de hongos los espacios de tu baño gracias al poder desinfectante que elimina los germenes, bacterias y suciedad de forma inmediata.",
+                category: "paraTubano",
+                onSale: false
+            },
+            {
+                id: 50,
+                name: "Sanitizantes de Manos 500ml",
+                price: 3.85,
+                originalPrice: 5.00,
+                image: "imagenes/sanitizante-de-manos.jpg",
+                description: "Producto especialmente formulado para proporcionar una acción altamente bactericida que elimina virus, bacterias y hongos. Contiene en su formulación elementos microbiocidas y humectantes que protegen la piel sin requerir de enjuague posterior y el secado puede realizarse al ambiente.",
+                category: "bactericidas",
+                onSale: true
+            },
+            {
+                id: 51,
+                name: "Alcohol Gel Manzanilla 500ml",
+                price: 4.25,
+                image: "imagenes/alcohol-gel-manzanilla.jpg",
+                description: "Producto especialmente formulado para proporcionar una accíon altamente sanitizante sobre las manos. Contiene en su formulación elementos bactericidas y humectantes que protegen la piel sin requerir de enjuague posterior, y el secado puede realizarse al ambiente.",
+                category: "bactericidas",
+                onSale: false
+            },
+            {
+                id: 52,
+                name: "Crema Limpiadora de Manos",
+                price: 6.95,
+                image: "imagenes/crema-limpiadora-de-manos.jpg",
+                description: "Es un producto de uso domestico-industrial sin abrasivos o elementos dañinos para cualquier tipo de piel, contiene humectantes que evitan el resecamiento y la irritación al contacto con rasguños o cortes, además de ser efectiva para la limpieza sin agua, elimina grasas, aceites, pintura, brea, tintas y otros tipos de suciedad.",
+                category: "bactericidas",
+                onSale: false
+            },
+            {
+                id: 53,
+                name: "Jabón Líquido Aroma Navidad 500ml",
+                price: 4.25,
+                image: "imagenes/jabon-liquido-navidad.jpg",
+                description: "Con suaves notas de canela, pino y manzana, cuida tu piel mientras disfrutas de la magia navideña en cada espuma🎄🧼 ¡Ideal para tener en casa o regalar en esta temporada!🎁 Suavidad y frescura para tus manos, Formula hidratante y delicada.EDICION LIMITADA.",
+                category: "jabonesLiquidos",
+                onSale: false
+            },
+            {
+                id: 54,
+                name: "Jabón Líquido Durazno & Sandia 500ml",
+                price: 4.40,
+                image: "imagenes/JABON-DURAZNO-SANDIA.jpg",
+                description: "🌸✨¡Nuevo jabon Durazno Sandia🍑🍉 💖Aroma irresistible que refresca y envuelve tus manos 🦠❌Elimina bacterias para una limpieza total 🌿Suave con tu piel, pero poderoso contra la suciedad.",
+                category: "jabonesLiquidos",
+                onSale: false
+            },
+            {
+                id: 55,
+                name: "Jabón Líquido Coco & Vainilla 500ml",
+                price: 4.40,
+                image: "imagenes/coco-vainilla.jpg",
+                description: "🧼✨¡Tu momento de lavado de manos nunca fue tan delicioso!😍 Descubre el jabon de manos Coco Vinilla🥥🍦 🌿Suave con tu piel, 💧Hidratacion que se siente desde el primer uso, 😊Y un aroma...¡Irresistible!.",
+                category: "jabonesLiquidos",
+                onSale: false
+            },
+            {
+                id: 56,
+                name: "Jabón Líquido Pera & Manzana 500ml",
+                price: 4.40,
+                image: "imagenes/jabon-pera-manzana.jpg",
+                description: "🧼✨¡Tu momento de lavado de manos nunca fue tan delicioso!😍 Descubre el jabon de manos Pera & Manzana🍐🍎 🌿Suave con tu piel, 💧Hidratacion que se siente desde el primer uso, 😊Y un aroma...¡Irresistible!.",
+                category: "jabonesLiquidos",
+                onSale: false
+            },
+            {
+                id: 57,
+                name: "Jabón Líquido Chicle 500ml",
+                price: 4.75,
+                image: "imagenes/JABON-CHICLE.jpeg",
+                description: "🧼✨¡Tu momento de lavado de manos nunca fue tan delicioso!😍 Descubre el jabon de manos Chicle 🌿Suave con tu piel, 💧Hidratacion que se siente desde el primer uso, 😊Y un aroma...¡Irresistible!.",
+                category: "jabonesLiquidos",
+                onSale: false
+            },
+            {
+                id: 58,
+                name: "Jabón Líquido Floral",
+                price: 4.25,
+                image: "imagenes/jabon-liquido-floral.jpg",
+                description: "Producto especialmente diseñado para el lavado de manos y cuerpo, formulado a base de humectantes, tensoactivos, para proporcionar una efectiva limpieza y devolver la suavidad a su piel.",
+                category: "jabonesLiquidos",
+                onSale: false
+            },
+            {
+                id: 60,
+                name: "Body Splash Felicidad 250ml",
+                price: 7.45,
+                image: "imagenes/body-felicidad.jpg",
+                description: "✨Descubre el Body Splash que te hará sentir la verdadera felicidad🌸🌿. Un aroma único que ilumina tus dias y te envuelve en una sensacion de bienestar💖.",
+                category: "paraEllas",
+                onSale: false
+            },
+            {
+                id: 61,
+                name: "Gel de Baño Almendras 385ml",
+                price: 6.10,
+                image: "imagenes/gel-bano-almendra.jpg",
+                description: "Producto ideal para el lavado del cuerpo. formulado a base de humectantes, tensoactivos y acondicionadores de PH para proporcionar una efectiva limpieza, suavidad y fragancia de un producto de calidad.",
+                category: "paraEllas",
+                onSale: false
+            },
+            {
+                id: 62,
+                name: "Jabón Espumoso Hierba Luisa y Limón 280ml",
+                price: 9.25,
+                image: "imagenes/JABON-ESPUMOSO.jpg",
+                description: "Jabón perfumado, ideal para el lavado, humectacion y desinfectacción de manos, su formulación es una mezcla de tensoactivos y humectantes, que eliminan la suciedad de manera fácil y suave para la piel. Elimina fácilmente la suciedad de las manos, obteniendo: humectación prolongada y agradable sensación al aplicar.",
+                category: "paraEllas",
+                onSale: false
+            },
+            {
+                id: 63,
+                name: "Jabón Líquido Brío 500ml",
+                price: 4.90,
+                image: "imagenes/jabon-liquido-brio-500.jpg",
+                description: "Producto especialmente diseñado para el lavado de manos y cuerpo. Formulado a base de humectantes, tensoactivos, para proporcionar una efectiva limpieza y devolver la suavidad a su piel.",
+                category: "paraEllos",
+                onSale: false
+            },
+            {
+                id: 64,
+                name: "Gel de Baño Brío 385ml",
+                price: 6.25,
+                image: "imagenes/Gel-Bano-Brio.jpg",
+                description: "Es un producto de carácter viscoso, ideal para el lavado del cuerpo, su formulación es a base de humectantes, tensoactivos y acondicionadores de PH para proporcionar limpieza, suavidad y fragancia en tu piel.",
+                category: "paraEllos",
+                onSale: false
+            },
+            {
+                id: 65,
+                name: "Loción Corporal Brío 250ml",
+                price: 9.60,
+                image: "imagenes/locion-brio.jpg",
+                description: "Descubre la esencia de la elegancia ✨Locion Corporal Brio que encarna fuerza y sofisticacion💪🌿 Para el hombre que sabe lo que quiere, Brio es una fragancia que lo acompaña en cada momento especial.",
+                category: "paraEllos",
+                onSale: false
+            },
+            {
+                id: 66,
+                name: "Suplemento Nutricional de Colágeno Hidrolizado 360GR",
+                price: 39.99,
+                image: "imagenes/COLAGENO.jpg",
+                description: "Suplemento nutricional a base de colágeno hidrolizado en polvo con vitamina C sabor a Naranja.",
+                category: "vidaSana",
+                onSale: false
+            },
+            {
+                id: 67,
+                name: "Proteína Vegetal Vainilla 450GR",
+                price: 44.99,
+                image: "imagenes/proteina.jpg",
+                description: "¡Sabe increible y te nutre de verdad!🌱💪 Sabor a chocolate🍫 o frutas🍓 Aporta hasta 25g de proteina por porción, Ideal para completar tu requerimiento diario, Sin lactosa, sin soya, sin culpa🌿 Tu cuerpo lo nesecita. Tu paladar lo agradece.",
+                category: "vidaSana",
+                onSale: false
+            },
+            {
+                id: 68,
+                name: "Bebida Multicereal Instantánea 500GR",
+                price: 11.30,
+                image: "imagenes/BEBIDA-MULTICEREAL.jpeg",
+                description: "Combina, calidad, sabor y nutrición. Contiene: Hierro, Calcio, Acido Fólico, Vitamina B1, Vitamina B2, Vitamina B3, Vitamina C. Ideal para el desayuno, no requiere cocción.",
+                category: "vidaSana",
+                onSale: false
+            },
+            {
+                id: 69,
+                name: "Espuma Limpiadora Multiusos Magic Clean 280ml",
+                price: 8.30,
+                image: "imagenes/espuma-magic.jpg",
+                description: "¡La espuma magica que limpia TODO llego!👟👜 Magic Clean elimina manchas en segundos Sin esfuerzo, sin frotar fuerte y sin dañar PRUEBALA Y SORPRENDETE.",
+                category: "paraTuauto",
+                onSale: false
+            },
+            {
+                id: 70,
+                name: "Shampoo de Autos con Cera, Fresa Litro",
+                price: 5.40,
+                image: "imagenes/shampoo-de-autos.jpg",
+                description: "Es un detergente líquido con cera, especialmente formulado para una mejor limpieza y abrillantado tanto del motor com de su carrocería. Dispone de cera para proporcionar brillo y protección.",
+                category: "paraTuauto",
+                onSale: false
+            },
+            {
+                id: 71,
+                name: "Silicona Abrillantadora de Superficies Vainilla 500ml",
+                price: 6.70,
+                image: "imagenes/silicona-abrillantadora.jpg",
+                description: "Es una emulsión que limpia y protege superficies de cuero y plástico, deja una película protectora que impide la adherencia de polvo y tierra. Gracias a su formulación se puede aplicar en diferentes superficies como plasticos, cuero, vinil, madera, etc.",
+                category: "paraTuauto",
+                onSale: false
+            },
+            {
+                id: 72,
+                name: "Ambiental Aroma Navidad 250ml",
+                price: 7.30,
+                image: "imagenes/ambiental-navidad.jpeg",
+                description: "Nuestro nuevo ambientador llenara tu hogar con el magico olor a pino, canela y clavos de olor🎅✨Respira el espirutud festivo en cada fragancia.",
+                category: "paraTuauto",
+                onSale: false
+            },
+            {
+                id: 73,
+                name: "Ambiental Aroma Auto Nuevo 120ml",
+                price: 5.50,
+                image: "imagenes/ambiental-autoNuevo.jpg",
+                description: "La solución perfecta, para que tu auto siempre huela como nuevo, Fresco✔ Elegante✔ Duradero✔. ¡Haz que cada viaje sea como estrenar carro! PRUEBALO Y SIENTE LA DIFERENCIA.",
+                category: "paraTuauto",
+                onSale: false
+            },
+            {
+                id: 74,
+                name: "Ambiental Aroma Vainilla Oriental 250ml",
+                price: 8.10,
+                image: "imagenes/ambiental-vainilla-oriental.jpg",
+                description: "Es un concentrado de fácil aplicación, formulado para controlar y eliminar olores desagradables, dejando un aroma agradble y perdurable en el ambiente, los ambientes tratados permanecen por largo tiempo debido a sus componentes desodorizantes de alta eficaci residual.",
+                category: "paraTuauto",
+                onSale: false
+            },
+            {
+                id: 75,
+                name: "Esponja Microfibra para Auto",
+                price: 4.35,
+                image: "imagenes/esponja-microfibra.jpg",
+                description: "El mejor aliado para el cuidado de tu vehículo, cuenta con materiales que protege la pintura, no genera pelusa y tiene una gran ergonomía para el lavado.",
+                category: "paraTuauto",
+                onSale: false
+            },
+            {
+                id: 76,
+                name: "Mejorador de Combustible Fuel Power 6onz",
+                price: 7.95,
+                image: "imagenes/fuel-power.jpg",
+                description: "Fuel Power es el único mejorador de combustible de función múltiple que actualmente existe en el mercado. Fuel Power es una combinación de resinas sintéticas y compuestos orgánicos, 100% biodegradable y no contiene alcohol.",
+                category: "paraTuauto",
+                onSale: false
             }
         ];
 
